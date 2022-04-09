@@ -17,7 +17,7 @@ public class DemoController {
 	@Autowired
 	private BrandService brandService;
 
-	@GetMapping("/")
+	@GetMapping("/demo")
 	public String showListBrand(Model theModel) {
 		List<Brand> theCustomers = brandService.getListBrand();
 		theModel.addAttribute("customers", theCustomers);
