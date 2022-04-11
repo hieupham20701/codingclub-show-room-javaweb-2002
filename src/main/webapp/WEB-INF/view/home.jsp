@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>3HVL Showroom</title>
-<%@ include file="including_file.html"%>
+<%@ include file="including_file.jsp"%>
 </head>
 <body>
 	<%@ include file="jsp/header.jsp"%>

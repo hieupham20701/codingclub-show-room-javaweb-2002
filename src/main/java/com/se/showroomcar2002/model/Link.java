@@ -1,4 +1,4 @@
-package com.se.showroomcar2002.entity;
+package com.se.showroomcar2002.model;
 
 public class Link {
 	private String title;

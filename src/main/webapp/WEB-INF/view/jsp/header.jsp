@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="com.se.showroomcar2002.entity.Link"%>
+<%@ page import="com.se.showroomcar2002.model.Link"%>
 <%@ page import="com.se.showroomcar2002.config.HeaderConfig"%>
 <%@ page import="java.util.List"%>
 <%@ page import="javax.servlet.http.HttpUtils.*"%>
@@ -13,13 +13,13 @@ pageContext.setAttribute("links", links);
 pageContext.setAttribute("path", path);
 %>
 <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-gray-800">
-	<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+<nav class="bg-gray-801 fixed z-50 w-full bg-black">
+	<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 bg-black">
 		<div class="relative flex items-center justify-between h-16">
-			<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+			<div class="absolute inset-y-1 left-0 flex items-center sm:hidden">
 				<!-- Mobile menu button-->
 				<button type="button"
-					class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+					class="inline-flex items-center justify-center p-3 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
 					aria-controls="mobile-menu" aria-expanded="false">
 					<span class="sr-only">Open main menu</span>
 					<!--
@@ -54,9 +54,9 @@ pageContext.setAttribute("path", path);
 				class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
 				<div class="flex-shrink-0 flex items-center">
 					<img class="block lg:hidden h-8 w-auto"
-						src="assets/logo.png" alt="Workflow"> <img
+            src='<c:url value="/resources/assets/logo.png" />' alt="Workflow"> <img
 						class="hidden lg:block h-8 w-auto"
-						src="assets/logo.png" alt="Workflow">
+            src='<c:url value="/resources/assets/logo.png" />' alt="Workflow">
 				</div>
 				<div class="hidden sm:block sm:ml-6">
 					<div class="flex space-x-4">
@@ -124,15 +124,12 @@ pageContext.setAttribute("path", path);
 				<c:otherwise>
 					<div
 						class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-						<a href="jsp/login.jsp"
-							class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+						<a href="login"
+							class="mr-5 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
 							Login</a>
-						<div class="ml-5 relative">
-							<div>
 								<a type="button"
-									class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+									class="py-2 px-4 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75">
 									Sign Up</a>
-							</div>
 
 						</div>
 					</div>
